@@ -17,7 +17,7 @@ export const USERS :UserModel[]=[
 },
 {
     id:3,
-    username:"Yehuda Arie",
+    username:"Yehuda Arie Leib",
     email:"ya@gmail.com",
     userInfo: new UserInfo()
 }

@@ -18,14 +18,12 @@
     <button (click)="saveUserData(emailInput.value,nameInput.value)">Save</button>
     </div>
     <ul>
-      <ng-container *ngIf="currentUser; else NoResult">
+      <ng-container *ngIf="arrayUser; else NoResult">
       <li [ngClass]="{selected:currentUser?.id===user.id}" *ngFor=" let user of arrayUser" 
       (click)="onUserSelected(user)" [value]="user.username">
-      <div>
-        <div class="">
-          <b>{{user.name}}</user></b>
-        </div>
-      </div>
+    
+          <b>{{user.username}}</b>
+      
       </li>
      </ng-container>
      <ng-template #NoResult>

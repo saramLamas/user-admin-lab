@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserModel } from 'src/app/models/UserModel.model';
+import { USERS } from 'src/app/mocks/users.mock';
 
 @Component({
   selector: 'app-user-container',
@@ -18,7 +19,8 @@ export class UserContainerComponent implements OnInit {
   ngOnInit(): void {
     console.log("The User Container Init!!!")
     this.currentUser= new UserModel();
-    this.arrayUser= new Array<UserModel>();
+    this.arrayUser=USERS;
+  
 
   }
   saveUserData(emailValue:string,nameValue:string){
