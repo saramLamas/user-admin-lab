@@ -1,0 +1,14 @@
+<ul>
+    <ng-container *ngIf="innerUsers; else NoResult">
+    <li [ngClass]="{selected:currentUser?.id===user.id}" 
+    *ngFor=" let user of innerUsers" 
+    (click)="onUserSelected(user)" >
+  
+        <b>{{user.username}}</b>
+    
+    </li>
+   </ng-container>
+   <ng-template #NoResult>
+     No Result.
+   </ng-template>
+  </ul>

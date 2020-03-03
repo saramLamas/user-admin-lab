@@ -23,9 +23,9 @@ export class UserContainerComponent implements OnInit {
   
 
   }
-  saveUserData(emailValue:string,nameValue:string){
-    //this.currentUser.email=emailValue;
-    //this.currentUser.username=nameValue;
+  saveUserData(dataObj:any){
+    this.currentUser.email=dataObj.email;
+    this.currentUser.username=dataObj.name;
   }
 
   onUserSelected(user:UserModel){
